@@ -1,0 +1,55 @@
+/* @theme pwr */
+
+@import 'default';
+
+section {
+  background-color: #fff;
+  color: #000;
+  background-image: url('../slides/images/PWr_logo_red.svg');
+  background-repeat: no-repeat;
+  background-position: right 40px top 40px;
+  background-size: 23%;
+}
+
+section.lead {
+  background-image: url('../slides/images/PWr_a1_red.svg');
+  background-position: right 70px bottom 70px;
+  background-size: 50%;
+}
+
+section h1,
+section a,
+section footer,
+section::after {
+  color: #a12c19;
+}
+
+section a {
+  text-decoration: underline;
+}
+
+section.invert {
+  background-color: #a12c19;
+  color: #fff;
+  background-image: url('../slides/images/PWr_logo_white.svg');
+}
+
+section.lead.invert {
+  background-image: url('../slides/images/PWr_a1_white.svg');
+}
+
+section.invert h1,
+section.invert footer,
+section.invert::after {
+  color: #fff;
+}
+
+section.invert a {
+  color: #f9f9f9;
+  text-decoration: underline;
+}
+
+/* Add "Page" prefix and total page number */
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
